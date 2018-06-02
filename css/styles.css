@@ -6,19 +6,29 @@ html, body {
 }
 
 body {
+	min-width: 960px;
+	font-weight: 700;
+	font-size: 14px;
+	font-family: "PT Sans Narrow", "Arial", sans-serif;
+	text-transform: uppercase;
+	background: ;
+	color: #ffffff;
+	background: #444444 url("img/body-bg.jpg") no-repeat center top;
+/*
 	background: #AAA url("barbershop-index-grid.jpg") no-repeat 50% 3px;
 	background-size: 1122px auto;
+*/
 }
 
-.clearfix::after {
+/*.clearfix::after {
 	content: "";
 	display: table;
 	clear: both;
 
 	/* just to debug grid */
-	height: 20px;
+	height: 0;
 	background-color: yellow;
-}
+}*/
 
 .main-header {
 	/* just to debug grid */
@@ -36,13 +46,39 @@ body {
 	outline: 2px green dotted;
 }
 
-.main-navigation {
+.main-navigation { 
 	float: left;
 	width: 780px;
-	
+
 	/* just to debug grid */
 	min-height: 70px;
 	outline: 2px yellow dotted;
+}
+
+.main-navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.main-navigation li {
+	display: inline-block;
+
+	font-size: 16px;
+	line-height: 20px;
+	vertical-align: top;
+}
+
+.main-navigation a {
+	display: block;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 25px 20px;
+}
+
+.main-navigation a:hover {
+	/*text-decoration: underline;*/
+	background: #242424;
 }
 
 .user-block {
@@ -51,7 +87,39 @@ body {
 
 	/* just to debug grid */
 	min-height: 70px;
-	outline: 2px blue	 dotted;
+	outline: 2px blue dotted;
+}
+
+.login {
+	position: relative;
+
+	display: inline-block;
+	padding: 25px 20px;
+	padding-left: 50px;
+	font-size: 16px;
+	line-height: 20px;
+	vertical-align: top;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.login:hover {
+}
+
+.login:hover::before {
+	opacity: 1;
+}
+
+.login::before {
+	content: "";
+	position: absolute;
+	top:28px;
+	left: 20px;
+	width: 18px;
+	height: 18px;
+	background: #dddddd url("img/sprite.png") no-repeat;
+	background-position: -1px -15px;
+	opacity: 0.3;
 }
 
 .index-logo {
@@ -69,18 +137,33 @@ body {
 	margin-bottom: 80px;
 }
 
-.feature-item {
+.features-item {
 	float: left;
-	width: 300px;
-	margin-right: 20px;
+	width: 290px;
+	margin-right: 30px;
+
+	text-align: center;
 
 	/* just to debug grid */
 	min-height: 175px;
 	outline: 2px orange dotted; 
 }
 
-.feature-item:last-child {
+.features-item p {
+	padding: 20px;
+}
+
+.features-item:last-child {
 	margin-right: 0;
+}
+
+.features-name {
+	display: block;
+	margin-bottom: 30px;
+	padding-bottom: 35px;
+
+	font-size: 30px;
+	line-height: 42px;
 }
 
 .index-content {
@@ -140,4 +223,16 @@ body {
 	/* just to debug grid */
 	min-height: 90px;	
 	outline: 1px dotted; 
+}
+
+
+/************************************/
+.centermodwindow-fixedsize {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	margin-top: -50%;
+	margin-left: -50%;
 }
